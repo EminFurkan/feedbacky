@@ -22,7 +22,7 @@
         },
         {
             "src": "/",
-            "dest": "public/lib.js"
+            "dest": "public/dashboard.html"
         },
         {
             "src": "/(.+)",
