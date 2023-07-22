@@ -2,4 +2,3 @@ node_modules
 environment
 coverage
 jest.config.js
-dist
