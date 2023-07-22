@@ -1,0 +1,15 @@
+@import './colors.scss';
+
+@mixin btn ($width, $height, $bgColor) {
+  width: $width;
+  height: $height;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  background-color: $bgColor;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}

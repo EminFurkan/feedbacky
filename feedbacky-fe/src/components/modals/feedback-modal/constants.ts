@@ -1,0 +1,1 @@
+export const CAPTION = 'Send your feedback';
