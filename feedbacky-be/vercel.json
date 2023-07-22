@@ -21,7 +21,7 @@
             "dest": "dist/index.js"
         },
         {
-            "src": "/",
+            "src": "/lib.js",
             "dest": "public/lib.js"
         },
         {
@@ -29,4 +29,4 @@
             "dest": "public/$1"
         }
     ]
-}
+} 
