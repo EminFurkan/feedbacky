@@ -17,12 +17,12 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
-            "dest": "dist/index.js"
-        },
-        {
             "src": "/",
             "dest": "public/dashboard.html"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "dist/index.js"
         },
         {
             "src": "/(.+)",
