@@ -1,16 +1,32 @@
 {
-  "version": 2,
-  "builds": [
-      {
-          "src": "dist/index.js",
-          "use": "@vercel/node",
-          "config": { "includeFiles": ["dist/**"] }
-      }
-  ],
-  "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "dist/index.js"
-      }
-  ]
+    "version": 2,
+    "builds": [
+        {
+            "src": "dist/index.js",
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "dist/**"
+                ]
+            }
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/index.js"
+        },
+        {
+            "src": "/",
+            "dest": "public/lib.js"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "public/$1"
+        }
+    ]
 }
