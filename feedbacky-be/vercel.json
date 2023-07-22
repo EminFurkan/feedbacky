@@ -17,15 +17,11 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/((?!.*\\.\\w+$).*)",
             "dest": "dist/index.js"
         },
         {
-            "src": "/",
-            "dest": "public/dashboard.js"
-        },
-        {
-            "src": "/(.+)",
+            "src": "/(.+\\.[a-z]+)$",
             "dest": "public/$1"
         }
     ]
