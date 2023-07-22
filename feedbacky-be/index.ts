@@ -31,7 +31,7 @@ connectToDB()
   });
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
 
