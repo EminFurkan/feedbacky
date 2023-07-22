@@ -7,6 +7,7 @@ import { getDashboard } from './controllers/dashboard-controller';
 import { createFeedbackController } from './controllers/feedback-controller';
 import { connectToDB } from './config/db.conf';
 import { RATE_LIMIT_NUM, RATE_LIMIT_WINDOW } from './constants/constants';
+import path from 'path';
 
 dotenv.config({ path: './environment/.env' });
 
