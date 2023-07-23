@@ -4,7 +4,7 @@ feedbackyContainer.id = 'root';
 document.body.appendChild(feedbackyContainer);
 
 const feedbackyScript = document.createElement('script');
-feedbackyScript.src = 'https://feedbacky-fe-eminfurkan.vercel.app/assets/index-2af8f350.js';
+feedbackyScript.src = 'https://feedbacky-fe-eminfurkan.vercel.app/assets/index-f5786c37.js';
 feedbackyScript.async = true;
 feedbackyScript.crossOrigin = 'anonymous';
 feedbackyScript.type = 'module';
