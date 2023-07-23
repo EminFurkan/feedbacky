@@ -34,14 +34,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/public')));
 
-app.get('/', (req: Request, res: Response) => {
-  res.sendFile('dashboard.html', {root: path.join(__dirname, 'public')});
-});
-
-app.get('/', (req: Request, res: Response) => {
+app.get('/lib', (req: Request, res: Response) => {
   res.sendFile('lib.js', {root: path.join(__dirname, 'public')});
 });
-
 
 app.set('view engine', 'ejs');
 

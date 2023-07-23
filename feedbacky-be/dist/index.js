@@ -12,6 +12,7 @@ const dashboard_controller_1 = require("./controllers/dashboard-controller");
 const feedback_controller_1 = require("./controllers/feedback-controller");
 const db_conf_1 = require("./config/db.conf");
 const constants_1 = require("./constants/constants");
+const path_1 = __importDefault(require("path"));
 dotenv_1.default.config({ path: './environment/.env' });
 // Set up rate limiter
 const limiter = (0, express_rate_limit_1.default)({
@@ -32,7 +33,10 @@ const PORT = process.env.PORT;
 });
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());
-app.use(express_1.default.static('public'));
+app.use(express_1.default.static(path_1.default.join(__dirname + '/public')));
+app.get('/lib', (req, res) => {
+    res.sendFile('lib.js', { root: path_1.default.join(__dirname, 'public') });
+});
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.send('Feedbacky Server');
